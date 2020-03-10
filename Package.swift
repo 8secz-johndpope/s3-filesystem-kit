@@ -10,10 +10,10 @@ let package = Package(
         .library(name: "S3FileSystemKit", targets: ["S3FileSystemKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-aws/aws-sdk-swift", .upToNextMajor(from: "4.4.0"))
+        .package(url: "https://github.com/swift-aws/aws-sdk-swift", .branch("master"))
     ],
     targets: [
-        .target(name: "S3FileSystemKit", dependencies: ["S3"]),
+        .target(name: "S3FileSystemKit", dependencies: ["AWSS3"]),
         .testTarget(name: "S3FileSystemKitTests", dependencies: ["S3FileSystemKit"]),
     ]
 )
